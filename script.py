@@ -16,7 +16,7 @@ def clean_text(text):
     text = re.sub(r'\d+', '', text)
     text = re.sub(r'[^\w\s]', '', text)
 
-    # remove stopwards
+    # remove stopwords
     stop_words = set(stopwords.words('english'))
     tokens = word_tokenize(text)
     filtered_text = [word for word in tokens if word not in stop_words]
